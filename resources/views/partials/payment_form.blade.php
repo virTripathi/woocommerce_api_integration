@@ -2,7 +2,7 @@
     <div
       class="relative grid px-4 py-8 m-0 overflow-hidden text-center text-white bg-gray-900 place-items-center rounded-md bg-clip-border shadow-gray-900/20">
       <h5 class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-white">
-        Riyadvi Software Wallet
+        Avail Your Gift Card
       </h5>
     </div>
     <div class="z-[999] backdrop-blur-sm absolute grid h-full w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible hidden" id="spinner2">

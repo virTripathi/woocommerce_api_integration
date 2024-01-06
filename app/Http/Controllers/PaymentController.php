@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Traits\HttpResponses;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
@@ -72,7 +73,7 @@ class PaymentController extends Controller
         try {
             $user = User::create([
                 'number'=>$request->number,
-                'card_number'=>$request->coupon_code,
+                'card_number'=>Crypt::encrypt($request->coupon_code),
                 'wallet_balance'=>$balance
             ]); 
             return $this->success([],'Gift Card Balance Of INR '.$balance.' has been added successfully to your account!',201);
